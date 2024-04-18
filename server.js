@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const product = require("./models/productModel");
 const productRouter = require("./routes/routes");
 const orderRouter = require("./routes/orderRoutes");
-const DB = require("./config/DB");
+const DB = require("./config/db");
 const e = require("express");
 
 console.log(process.env.NODE_ENV);

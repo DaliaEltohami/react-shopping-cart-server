@@ -2,19 +2,14 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const product = require("./models/productModel");
 const productRouter = require("./routes/routes");
 const orderRouter = require("./routes/orderRoutes");
 const DB = require("./config/db");
-const e = require("express");
-
-console.log(process.env.NODE_ENV);
 
 const app = express();
 
-DB();
-
 app.use(bodyParser.json());
+DB();
 app.use("/", productRouter);
 app.use("/", orderRouter);
 

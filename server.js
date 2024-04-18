@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const PORT = process.env.PORT;
-app.listen(PORT || 3005, (req, res) => {
+const PORT = process.env.PORT || 3005;
+app.listen(PORT, (req, res) => {
   console.log("Server Running on Port 3005");
 });
